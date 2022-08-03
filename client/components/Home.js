@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 /**
  * COMPONENT
  */
-export const Home = props => {
+export const Home = (props) => {
   const {username} = props
 
   return (
@@ -17,9 +17,9 @@ export const Home = props => {
 /**
  * CONTAINER
  */
-const mapState = state => {
+const mapState = (state) => {
   return {
-    username: state.auth.username
+    username: state.auth.username,
   }
 }
 
