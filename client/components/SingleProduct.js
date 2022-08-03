@@ -31,7 +31,7 @@ class SingleProduct extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    product: state.singleProduct,
+    product: state.products.singleProduct,
   };
 };
 
