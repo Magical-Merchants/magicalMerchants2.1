@@ -22,10 +22,10 @@ export const getProducts = () => {
   };
 };
 
-export const getSingleProduct = () => {
+export const getSingleProduct = (id) => {
   return async (dispatch) => {
     try {
-      const { data } = await axios.get("/api/products/:id");
+      const { data } = await axios.get(`/api/products/${id}`);
       dispatch(gotSingleProduct(data));
     } catch (error) {
       console.error(error);
