@@ -2,7 +2,10 @@ const router = require('express').Router()
 const {
   models: {User},
 } = require('../db')
+// const {requireToken} = require('./gatekeepingMiddleware')
 module.exports = router
+
+
 
 router.get('/', async (req, res, next) => {
   try {
