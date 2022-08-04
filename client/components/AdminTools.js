@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
  */
 export const AdminTools = (props) => {
 //   const {username} = props
+// TODO: reducer file with thunk for users, attach token in thunk
 
   return (
     <div>

@@ -2,12 +2,13 @@ const router = require('express').Router()
 const {
   models: {User},
 } = require('../db')
-// const {requireToken} = require('./gatekeepingMiddleware')
+const {requireToken, isAdmin} = require('./gatekeepingMiddleware')
 module.exports = router
 
+// TODO: check that req.params.userId === req.user.id
+// 403 - forbidden
 
-
-router.get('/', async (req, res, next) => {
+router.get('/', requireToken, isAdmin, async (req, res, next) => {
   try {
     const users = await User.findAll({
       // explicitly select only the id and username fields - even though

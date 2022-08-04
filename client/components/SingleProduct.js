@@ -2,17 +2,16 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
   //not sure if we will use this
-import { getSingleProduct } from "..store/products";
+import { getSingleProduct } from "../store/products";
 
 class SingleProduct extends React.Component {
   
   componentDidMount() {
-    this.props.getSingleProduct(this.props.match.params.productId);
+    this.props.getSingleProduct(this.props.match.params.id);
   }
   
   render() {
     const product = this.props.product;
-    
     return (
     <div className='single-product'>
     
