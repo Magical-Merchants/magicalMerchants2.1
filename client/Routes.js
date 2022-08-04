@@ -5,6 +5,8 @@ import {Login, Signup} from './components/AuthForm'
 import Home from './components/Home'
 import AdminTools from './components/AdminTools'
 import Cart from './components/Cart'
+import AllProducts from './components/AllProducts'
+import SingleProduct from './components/SingleProduct'
 import {me} from './store'
 
 /**
@@ -19,11 +21,13 @@ class Routes extends Component {
     const {isLoggedIn} = this.props
     return (
       <div>
+        {/* TODO: have one switch statement, only show certain routes if user is logged in */}
         {isLoggedIn ? (
           <Switch>
             <Route path="/home" component={Home} />
             <Route path="/admin-tools" component={AdminTools} />
-            <Route path="/cart" component={Cart} />
+            <Route exact path="/products" component={AllProducts} />
+            <Route path="/products/:id" component={SingleProduct} />
             <Redirect to="/home" />
           </Switch>
         ) : (
@@ -31,6 +35,8 @@ class Routes extends Component {
             <Route path="/" exact component={Login} />
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />
+            <Route exact path="/products" component={AllProducts} />
+            <Route path="/products/:id" component={SingleProduct} />
           </Switch>
         )}
       </div>
