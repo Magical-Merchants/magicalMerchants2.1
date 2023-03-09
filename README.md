@@ -19,11 +19,6 @@
 - [Github](https://github.com/davilux)
 - [LinkedIn](https://www.linkedin.com/in/davilux/)
 
-### Eve Holzgruber
-
-- [Github](https://github.com/eholz)
-- [LinkedIn](https://www.linkedin.com/in/eveholzgruber/)
-
 ### Amy Morrisett
 
 - [Github](https://github.com/amy-morrisett)
